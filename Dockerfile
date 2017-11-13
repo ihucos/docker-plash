@@ -25,7 +25,7 @@ chmod 4755 /usr/local/bin/runp
 RUN git clone https://github.com/ihucos/plash.git /opt/plash
 
 RUN echo '#!/bin/sh' > /usr/local/bin/plash
-RUN echo 'export PATH=/opt/plash/bin:$PATH' > /usr/local/bin/plash
-RUN echo 'PYTHONPATH=/opt/plash:PYTHONPATH' > /usr/local/bin/plash
-RUN echo 'exec plash "$@"' > /usr/local/bin/plash
+RUN echo 'export PATH=/opt/plash/bin:$PATH' >> /usr/local/bin/plash
+RUN echo 'PYTHONPATH=/opt/plash:PYTHONPATH' >> /usr/local/bin/plash
+RUN echo 'exec plash "$@"' >> /usr/local/bin/plash
 RUN chmod 755 /usr/local/bin/plash
