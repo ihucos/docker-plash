@@ -29,3 +29,5 @@ RUN echo 'export PATH=/opt/plash/bin:$PATH' >> /usr/local/bin/plash
 RUN echo 'export PYTHONPATH=/opt/plash:PYTHONPATH' >> /usr/local/bin/plash
 RUN echo 'exec plash "$@"' >> /usr/local/bin/plash
 RUN chmod 755 /usr/local/bin/plash
+
+VOLUME ["/var/lib/plash", "/var/lib/runp-volumes"]
