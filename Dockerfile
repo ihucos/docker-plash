@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk add
+RUN apk add \
 python3 \
 python3-dev \
 squashfs-tools \
@@ -13,7 +13,7 @@ bash \
 util-linux \
 e2fsprogs \
 e2fsprogs-extra \
-ncurses \
+ncurses
 
 RUN wget 'https://github.com/opencontainers/runc/releases/download/v1.0.0-rc4/runc.amd64' -O /usr/local/bin/runc && \
 chmod 755 /usr/local/bin/runc
