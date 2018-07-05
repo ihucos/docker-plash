@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+prog=$(basename -- "$0")
+docker run --privileged=true --tmpfs /tmp --volume plashdata:/var/lib/plash -ti irae/docker-plash "$prog" "$@"
