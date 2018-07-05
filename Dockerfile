@@ -1,2 +1,2 @@
-FROM python:alpine
+FROM python
 RUN pip install plash
