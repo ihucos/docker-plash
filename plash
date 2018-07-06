@@ -1,4 +1,4 @@
-#!/bin/sh
-set -e
+#!/usr/bin/env bash
+set -eu
 prog=$(basename -- "$0")
-docker run --privileged=true --tmpfs /tmp --volume plashdata:/var/lib/plash -ti irae/docker-plash "$prog" "$@"
+exec docker run --env-file <(env -u PWD -u PATH) --workdir "$PWD" --volume /Users:/home --privileged=true --tmpfs /tmp --volume plashdata:/var/lib/plash -ti irae/docker-plash "$prog" "$@"
