@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
 set -eu
 prog=$(basename -- "$0")
-exec docker run --env-file <(env -u PWD -u PATH -u TMPDIR) --workdir "$PWD" --volume /Users:/home --privileged=true --tmpfs /tmp --volume plashdata:/var/lib/plash -ti irae/docker-plash "$prog" "$@"
+envs=$(env -u PWD -u PATH -u TMPDIR)
+
+# can an env be an command line option for echo?
+
+exec docker run \
+--env-file <(echo -n "$envs") \
+--workdir "$PWD" \
+--volume /Users:/home \
+--privileged=true \
+--tmpfs /tmp \
+--volume plashdata:/var/lib/plash \
+-ti irae/docker-plash "$prog" "$@"
