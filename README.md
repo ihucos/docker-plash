@@ -14,6 +14,11 @@ Consider it a beta, it is kind of experimental stuff that works really well. I (
 ## DATA LOSS WARNING
 TODO: write it. 
 
+## Screenshots
+A little bit fiddling with XQuartz, and you can have graphical applications.
+![screen shot 2018-10-02 at 00 41 56](https://user-images.githubusercontent.com/2066372/46319974-7a4ace80-c5dc-11e8-8841-44012e2a2b46.png)
+
+
 ## Caveats.
 
 - plash contaienrs are run with the `--privileged` flag
