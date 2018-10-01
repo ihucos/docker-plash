@@ -11,4 +11,12 @@ $ chmod +x /usr/local/bin/plash
 ## How stable is it?
 Consider it a beta, it is kind of experimental stuff that works really well. I (ihucos) actually developed a big portion of plash in a setup like this.
 
-## Limitations and Warnings
+## DATA LOSS WARNING
+TODO: write it. 
+
+## Caveats.
+
+- plash contaienrs are run with the `--privileged` flag
+- Docker does not handle stderr and stdout in a standart manner but to use plash in other scripts you actually need that
+- There are some hacks to if applicable map `/Users` to `/home`
+- See the data loss warning
