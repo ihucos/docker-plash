@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -eu
 prog=$(basename -- "$0")
+
+export HOME=$(echo "$HOME" | sed -E 's/^\/Users\//\/home\//g')
 envs=$(env -u PWD -u PATH -u TMPDIR)
 
 # can an env be an command line option for echo?
@@ -9,6 +11,7 @@ exec docker run \
 --env-file <(echo -n "$envs") \
 --workdir "$PWD" \
 --volume /Users:/home \
+--net=host \
 --privileged=true \
 --tmpfs /tmp \
 --volume plashdata:/var/lib/plash \
