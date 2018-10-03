@@ -10,7 +10,7 @@ $ chmod +x /usr/local/bin/plash
 ```
 
 ## Upgrade
-A rebuild is triggered on the docker build server after each plash release, to upgrade run:
+A rebuild is triggered on the docker hub/cloud after each plash release, to upgrade run:
 ```
 $ docker pull irae/docker-plash
 $ plash --version
