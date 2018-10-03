@@ -28,7 +28,7 @@ A little bit fiddling with XQuartz, and you can have graphical applications.
 
 ## Caveats.
 
-- plash contaienrs are run with the `--privileged` flag
-- Docker does not handle stderr and stdout in a standart manner but to use plash in other scripts you actually need that
+- plash containers are run with the `--privileged` flag
+- Docker does not handle stderr and stdout in a standard manner but to use plash in other scripts you actually need that
 - There are some hacks to if applicable map `/Users` to `/home`
 - See the data loss warning
