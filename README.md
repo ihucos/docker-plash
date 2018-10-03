@@ -9,6 +9,13 @@ $ curl -f https://raw.githubusercontent.com/ihucos/docker-plash/master/plash > /
 $ chmod +x /usr/local/bin/plash
 ```
 
+## Upgrade
+A rebuild is triggered on the docker build server after each plash release, to upgrade run:
+```
+$ docker pull irae/docker-plash
+$ plash --version
+```
+
 ## Data loss warning
 There is a [stackoverflow post](https://stackoverflow.com/questions/39024895/is-it-safe-to-use-same-host-volume-in-multiple-containers) citing possible data loss with multiple docker containers using the same named volume. This warning was removed from the link provided on the stackoverflow post and was about named volumes. This repo let's docker mount the home folder into the container on every invocation. If you now more about this (It's good enough for me) open an issue.
 
