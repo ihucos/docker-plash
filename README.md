@@ -8,16 +8,16 @@ This is [plash](https://github.com/ihucos/plash) packaged as a docker container.
 $ curl -f https://raw.githubusercontent.com/ihucos/docker-plash/master/plash > /usr/local/bin/plash
 $ chmod +x /usr/local/bin/plash
 ```
+
+## Data loss warning
+There is a [stackoverflow post](https://stackoverflow.com/questions/39024895/is-it-safe-to-use-same-host-volume-in-multiple-containers) citing possible data loss with multiple docker containers using the same named volume. This warning was removed from link provided on the stackoverflow post and was about named volumes. This repo let's docker mount the home folder into the container on every invocation. If you now more about this (It's good enough for me) open an issue.
+
 ## How stable is it?
 Consider it a beta, it is kind of experimental stuff that works really well. I (ihucos) actually developed a big portion of plash in a setup like this.
-
-## DATA LOSS WARNING
-TODO: write it. 
 
 ## Screenshots
 A little bit fiddling with XQuartz, and you can have graphical applications.
 ![screen shot 2018-10-02 at 00 41 56](https://user-images.githubusercontent.com/2066372/46319974-7a4ace80-c5dc-11e8-8841-44012e2a2b46.png)
-
 
 ## Caveats.
 
